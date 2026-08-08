@@ -1,5 +1,7 @@
 #支払額の詳細を書いた辞書を与える 　例. {"A": 100, "B": 500, "C":600}
 def warikan(detail: dict) -> str:
+    if detail == {}:
+        return "空の辞書は使用できません"
     #1人当たり支払額を計算
     average = sum(detail.values()) / len(detail) 
 
