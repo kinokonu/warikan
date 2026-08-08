@@ -1,12 +1,14 @@
-#支払額の詳細を書いた配列を与える 　例. {"A": 100, "B": 500, "C":600}
+#支払額の詳細を書いた辞書を与える 　例. {"A": 100, "B": 500, "C":600}
 def warikan(detail: dict) -> str:
+    if detail == {}:
+        return "空の辞書は使用できません"
     #1人当たり支払額を計算
     average = sum(detail.values()) / len(detail) 
 
-    #割り勘額からの乖離を格納した配列　 例. {"A": -300, "B": 100, "C":200}
+    #割り勘額からの乖離を格納した辞書　 例. {"A": -300, "B": 100, "C":200}
     diff = {}
 
-    #不足・超過額の配列を作成
+    #不足・超過額の辞書を作成
     for member in detail.keys():
         diff[member] = detail[member] - average 
 
@@ -21,12 +23,12 @@ def warikan(detail: dict) -> str:
         #支払いが最も多い人の差額と名前を取得
         max_person, max_value = max(diff.items(), key=lambda x: x[1])
 
-        #diffの全員の額が0になったら終了
-        if min_value >= 0:
+        #diffの全員の額が0になったら終了(四捨五入して0になったら終了)
+        if min_value > -0.5:
             break
 
         #支払額を計算
-        pay_amount = min(abs(min_value), max_value)
+        pay_amount = round(min(abs(min_value), max_value))
 
         #ansに支払額を追加
         ans.append({"from": min_person, "to": max_person, "amount": pay_amount})
