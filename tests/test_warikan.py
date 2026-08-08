@@ -24,5 +24,7 @@ def test_one():
 def test_empty():
     assert warikan({}) == ""
 
-
+#端数の発生時
+def test_hasuu():
+    assert warikan({"A": 300, "B": 300, "C": 400}) == ""
 
