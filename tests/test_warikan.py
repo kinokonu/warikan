@@ -1,4 +1,4 @@
-from warikan import warikan
+from warikan.warikan import warikan
 
 #一般的な場合
 def test_three():
