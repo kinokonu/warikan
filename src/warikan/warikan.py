@@ -35,5 +35,9 @@ def warikan(detail: dict) -> str:
         diff[min_person] += pay_amount
         diff[max_person] -= pay_amount
 
+    ans_text = ""
+    for i in ans:
+        #結果文を作成
+        ans_text += f'{i["from"]}さんは{i["to"]}さんに{i["amount"]}円支払う\n' 
 
-
+    return ans_text
