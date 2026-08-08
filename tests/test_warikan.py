@@ -12,3 +12,14 @@ def test_tatekae():
     assert "AさんはCさんに1000円支払う" in result
     assert "BさんはCさんに1000円支払う" in result
 
+#全員が同額を支払っている場合
+def test_dougaku():
+    assert warikan({"A": 1000, "B": 1000, "C": 1000}) == ""
+
+#参加者が１人だけ
+def test_one():
+    assert warikan({"A": 1000}) == ""
+
+
+
+
