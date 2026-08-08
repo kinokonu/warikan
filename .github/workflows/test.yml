@@ -1,0 +1,18 @@
+name: pytest
+on: [push]
+jobs:
+    pytest:
+        name: Run pytest
+        #ubuntu最新版を使用
+        runs-on: ubuntu-latest
+        steps:
+            #リポジトリのコードを取得
+            - uses: actions/checkout@v6
+            #uvを取得
+            - uses: astral-sh/setup-uv@v9.0.0
+            #pythonをuvに入れる
+            - run: uv python install
+            # チェック
+            - run: uv sync --locked
+            #pytestを実行
+            - run: uv run pytest
