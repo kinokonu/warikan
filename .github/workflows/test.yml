@@ -9,7 +9,7 @@ jobs:
             #リポジトリのコードを取得
             - uses: actions/checkout@v4
             #uvを取得
-            - uses: astral-sh/setup-uv@v9.0.0
+            - uses: astral-sh/setup-uv@v8
             #pythonをuvに入れる
             - run: uv python install
             # チェック
