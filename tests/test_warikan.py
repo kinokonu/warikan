@@ -20,6 +20,9 @@ def test_dougaku():
 def test_one():
     assert warikan({"A": 1000}) == ""
 
+#空の辞書が渡された時
+def test_empty():
+    assert warikan({}) == ""
 
 
 
