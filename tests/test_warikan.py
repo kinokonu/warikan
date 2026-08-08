@@ -22,9 +22,11 @@ def test_one():
 
 #空の辞書が渡された時
 def test_empty():
-    assert warikan({}) == ""
+    assert warikan({}) == "空の辞書は使用できません"
 
 #端数の発生時
 def test_hasuu():
-    assert warikan({"A": 300, "B": 300, "C": 400}) == ""
+    result = warikan({"A": 300, "B": 300, "C": 400}) 
+    assert "AさんはCさんに33円支払う" in result
+    assert "BさんはCさんに33円支払う" in result
 

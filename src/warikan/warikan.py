@@ -23,12 +23,12 @@ def warikan(detail: dict) -> str:
         #支払いが最も多い人の差額と名前を取得
         max_person, max_value = max(diff.items(), key=lambda x: x[1])
 
-        #diffの全員の額が0になったら終了
-        if min_value >= 0:
+        #diffの全員の額が0になったら終了(四捨五入して0になったら終了)
+        if min_value > -0.5:
             break
 
         #支払額を計算
-        pay_amount = min(abs(min_value), max_value)
+        pay_amount = round(min(abs(min_value), max_value))
 
         #ansに支払額を追加
         ans.append({"from": min_person, "to": max_person, "amount": pay_amount})
