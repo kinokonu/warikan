@@ -1,12 +1,12 @@
-#支払額の詳細を書いた配列を与える 　例. {"A": 100, "B": 500, "C":600}
+#支払額の詳細を書いた辞書を与える 　例. {"A": 100, "B": 500, "C":600}
 def warikan(detail: dict) -> str:
     #1人当たり支払額を計算
     average = sum(detail.values()) / len(detail) 
 
-    #割り勘額からの乖離を格納した配列　 例. {"A": -300, "B": 100, "C":200}
+    #割り勘額からの乖離を格納した辞書　 例. {"A": -300, "B": 100, "C":200}
     diff = {}
 
-    #不足・超過額の配列を作成
+    #不足・超過額の辞書を作成
     for member in detail.keys():
         diff[member] = detail[member] - average 
 
