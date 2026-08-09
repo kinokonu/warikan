@@ -58,7 +58,7 @@ uv run warikan
 
 ```bash
 # リポジトリのクローン
-git clone [https://github.com/kinokonu/warikan.git](https://github.com/kinokonu/warikan.git)
+git clone "https://github.com/kinokonu/warikan.git"
 cd warikan
 
 # 仮想環境構築 & 依存関係のインストール
