@@ -3,15 +3,13 @@
 
 # ビルド後ファイル
 dist/
-build/
-*.egg-info/
 
 # キャッシュファイル
 __pycache__/
-*.py[cod]
 
-# pytest キャッシュ
-.pytest_cache/
+src/warikan/__pycache__
+
+.gitub/.workflows/__pycache__
 
 # OS固有の不要ファイル (Macなど)
 .DS_Store
