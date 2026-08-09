@@ -1,4 +1,4 @@
-# 割り勘計算ライブラリ (warikan)
+# 割り勘計算ライブラリ：warikan
 [![pytest](https://github.com/kinokonu/warikan/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/kinokonu/warikan/actions/workflows/test.yml)
 
 支払い者と支払額が記載された辞書を渡すと、誰が誰に何円払えば差額を清算できるかを計算する Python ライブラリ・CLI ツールです。
