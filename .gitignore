@@ -7,9 +7,5 @@ dist/
 # キャッシュファイル
 __pycache__/
 
-src/warikan/__pycache__
-
-.gitub/.workflows/__pycache__
-
 # OS固有の不要ファイル (Macなど)
 .DS_Store
