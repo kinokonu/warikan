@@ -69,7 +69,7 @@ uv sync
 
 ## 🧪 開発環境 & テスト
 
-開発モードでの環境同期や、`pytest` によるユニットテストの実行手順です。
+開発モードでの環境同期や、`pytest` によるテストの実行手順です。
 
 ```bash
 # 依存関係の同期（開発用パッケージを含む）
@@ -83,12 +83,12 @@ uv run pytest
 
 ## 🔄 CI (Continuous Integration)
 
-GitHub Actions を導入しており、コード変更時に自動でテストを実行して品質を担保しています。
+GitHub Actions を導入しており、コード変更時に自動でテストを実行しています。
 
 - **ワークフロー定義**: `.github/workflows/ci.yml`
-- **実行タイミング**: `push` および `pull_request` 時
+- **実行タイミング**: `push` 時
 - **実行プロセス**:
-  1. `actions/checkout@v4` によるリポジトリコードの取得
-  2. `astral-sh/setup-uv@v5` による `uv` 環境の自動構築
+  1. `actions/checkout@v6` によるリポジトリコードの取得
+  2. `astral-sh/setup-uv@v9.0.0` による `uv` 環境の自動構築
   3. `uv sync --locked` による `uv.lock` に基づいた再現性のある依存関係の検証・インストール
   4. `uv run pytest` による全テストケースの自動実行
