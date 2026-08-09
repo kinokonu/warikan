@@ -1,0 +1,17 @@
+# 仮想環境
+.venv/
+
+# ビルド後ファイル
+dist/
+build/
+*.egg-info/
+
+# キャッシュファイル
+__pycache__/
+*.py[cod]
+
+# pytest キャッシュ
+.pytest_cache/
+
+# OS固有の不要ファイル (Macなど)
+.DS_Store
