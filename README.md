@@ -85,7 +85,7 @@ uv run pytest
 
 GitHub Actions を導入しており、コード変更時に自動でテストを実行しています。
 
-- **ワークフロー定義**: `.github/workflows/ci.yml`
+- **ワークフロー定義**: `.github/workflows/test.yml`
 - **実行タイミング**: `push` 時
 - **実行プロセス**:
   1. `actions/checkout@v6` によるリポジトリコードの取得
