@@ -50,8 +50,6 @@ uv run warikan
 {'田中': -1500, '鈴木': 1500}
 ```
 
-> 💡 **構造の補足**: `pyproject.toml` の `[project.scripts]` セクションで `warikan = "warikan:main"` を定義しているため、`uv run warikan` で直接 `main()` 関数が起動します。
-
 ---
 
 ## 🛠️ インストール・セットアップ
