@@ -5,7 +5,7 @@
 dist/
 
 # キャッシュファイル
-__pycache__/
+**/__pycache__/**
 
 # OS固有の不要ファイル (Macなど)
 .DS_Store
