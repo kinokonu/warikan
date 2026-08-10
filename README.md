@@ -88,7 +88,7 @@ GitHub Actions を導入しており、コード変更時に自動でテスト�
 - **ワークフロー定義**: `.github/workflows/test.yml`
 - **実行タイミング**: `push` 時
 - **実行プロセス**:
-  1. `actions/checkout@v6` によるリポジトリコードの取得
+  1. `actions/checkout@v6.0.0` によるリポジトリコードの取得
   2. `astral-sh/setup-uv@v9.0.0` による `uv` 環境の自動構築
   3. `uv sync --locked` による `uv.lock` に基づいた再現性のある依存関係の検証・インストール
   4. `uv run pytest` による全テストケースの自動実行
